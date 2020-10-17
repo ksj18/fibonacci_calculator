@@ -38,13 +38,13 @@ services:
       - C:\\Users\\krzysztof.janowski\\Dropbox\\Nauka_\\docker\\projects\\fibonacci_calculator_udemy_version\\api:/app
     # command: [ping 4.2.2.2]
     environment: 
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      PG_USER: PostgresUser
-      PG_HOST: postgres
-      PG_DATABASE: fib_calc_db
-      PG_PASSWORD: password123
-      PG_PORT: 5432
+    - REDIS_HOST=redis
+    - REDIS_PORT=6379
+    - PG_USER=PostgresUser
+    - PG_HOST=postgres
+    - PG_DATABASE=fib_calc_db
+    - PG_PASSWORD=password123
+    - PG_PORT=5432
   client: 
     build:
       context: ./client
